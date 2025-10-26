@@ -2,5 +2,7 @@ h1{
     color: blue;
 }
 #header1{
-    color:yellow ;
+    padding-left:10px;
+    border:dashed;
+    
 }
