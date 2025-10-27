@@ -2,6 +2,7 @@ const YEAR:i32=1996;
 type Number=i32;
 fn main() {
     let  apples :Number= 50;
+    #[allow(unused_variables)]
     let oranges = "20";
     let oranges:Number = 20;
     let fruits = apples + oranges;
