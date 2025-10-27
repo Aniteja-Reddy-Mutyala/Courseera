@@ -1,1 +1,0 @@
-/Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Rust\ Basics\ and\ Core\ Concepts/hello_world/target/release/hello_world: /Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Rust\ Basics\ and\ Core\ Concepts/hello_world/src/main.rs
