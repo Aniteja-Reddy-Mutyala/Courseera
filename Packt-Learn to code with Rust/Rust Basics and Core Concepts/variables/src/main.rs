@@ -1,6 +1,7 @@
 fn main() {
     let mut apples = 50;
-    let oranges = 24 + 6;
+    let oranges = "20";
+    let oranges=20;
     let _fruits = apples + oranges;
     apples = 100;
     println!(
