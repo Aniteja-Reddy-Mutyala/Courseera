@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 const YEAR:i32=1996;
 type Number=i32;
 fn main() {
