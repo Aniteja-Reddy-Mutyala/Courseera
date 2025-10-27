@@ -1,3 +1,4 @@
+const YEAR:i32=1996;
 fn main() {
     let  apples = 50;
     let oranges = "20";
@@ -5,7 +6,7 @@ fn main() {
     let fruits = apples + oranges;
     
     println!(
-        "My garden has {0} apples and {1} oranges.I did i got my desired target of {0} apples",
+        "My garden has {0} apples and {1} oranges in the year {YEAR}.I did i got my desired target of {0} apples",
         apples, oranges
     );
     {    
