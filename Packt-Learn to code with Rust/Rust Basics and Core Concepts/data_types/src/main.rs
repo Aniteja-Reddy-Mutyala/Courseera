@@ -39,4 +39,6 @@ fn main() {
      let my_age:i32=29;
      let am_i_eligible_to_vote:bool= my_age>voting_age;
      println!(" It is {am_i_eligible_to_vote} that i can vote");
+     println!("{}",5>=6);
+     println!("{}",false==false);
 }
