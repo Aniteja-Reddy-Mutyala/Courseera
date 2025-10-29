@@ -53,4 +53,5 @@ fn main() {
      println!("First number is {first_number} ,second number is {second_number}");
      numbers[0]=6;
      println!("The numbers are {:?}",numbers);
+     dbg!(numbers);
 }
