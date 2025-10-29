@@ -14,10 +14,19 @@ fn main() {
     println!("Ceil of pi is {}",pi.ceil());
     println!("Pi is rounded to {}",pi.round());
     println!("The value of pi till 2 decimal digits is : {pi:.2}");
-    let miles=60000;
+   
     // let miles_i8=miles as i8;
     let miles=100.01;
     let miles_int=miles as i32;
     println!("My miles is {miles_int}");
+    let addition = 9+7;
+    let subtraction = 9 - 7;
+    let multiplication = 9 * 7;
+    println!("Addition {addition},Subtraction {subtraction},product {multiplication}");
+    let floor_division:i32 = 9 / 7;
+    let decimal_division:f64 = 9.0 / 7.0;
+    println!("Decimal division {decimal_division} ,floor division {floor_division}");
+    let modulo_division:i32= 9 % 7;
+    println!("Modulo division {modulo_division}");
 
 }
