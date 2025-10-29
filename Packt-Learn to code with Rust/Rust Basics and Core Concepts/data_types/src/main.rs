@@ -28,5 +28,10 @@ fn main() {
     println!("Decimal division {decimal_division} ,floor division {floor_division}");
     let modulo_division:i32= 9 % 7;
     println!("Modulo division {modulo_division}");
+    let mut year:i32=2025;
+     year +=1;
+     println!("The new year is {year}");
+     year -=2;
+     println!("Last year is {year}");
 
 }
