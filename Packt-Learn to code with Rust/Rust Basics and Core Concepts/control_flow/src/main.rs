@@ -37,11 +37,18 @@ fn main() {
     };
     let mut seconds:i32=10;
     loop{
-        println!("{seconds} seconds!");
-        seconds -= 1;
-        if seconds < 0{
+         if seconds <= 0{
             println!(" let s start");
             break;
         }
+        
+        if seconds % 2 == 0 {
+            println!("{seconds} seconds skipped by 3 seconds");
+            seconds -=3;
+            continue;
+        }
+        println!("{seconds} seconds!");
+        seconds -= 1;
+       
     }
 }
