@@ -47,6 +47,10 @@ fn main() {
      let first_initial='a';
      let emoji:char= '😁';
      println!("{} {}",first_initial.is_alphabetic(),emoji.is_alphabetic());
-     let numbers:[i32;5]=[1,2,3,4,5];
+     let mut numbers:[i32;5]=[1,2,3,4,5];
+     let first_number:i32=numbers[0];
+     let second_number:i32=numbers[1];
+     println!("First number is {first_number} ,second number is {second_number}");
+     numbers[0]=6;
      println!("The numbers are {:?}",numbers);
 }
