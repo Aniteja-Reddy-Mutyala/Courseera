@@ -44,4 +44,7 @@ fn main() {
      let citizen:bool=false;
      let can_vote= am_i_eligible_to_vote&& citizen;
      println!("It is {can_vote} that i can vote");
+     let first_initial='a';
+     let emoji:char= '😁';
+     println!("{} {}",first_initial.is_alphabetic(),emoji.is_alphabetic());
 }
