@@ -29,4 +29,10 @@ fn main() {
          _ => println!("Lots of rain"),
         
     };
+    let number:i32=9;
+    match number {
+        check_number if check_number % 2 == 0 => println!("{check_number} is an even number"),
+        check_number if check_number % 2 != 0 => println!("{check_number} is an odd number"),
+        _ => unreachable!(),
+    };
 }
