@@ -13,4 +13,6 @@ fn main() {
     println!("Floor of the pi is {}",pi.floor());
     println!("Ceil of pi is {}",pi.ceil());
     println!("Pi is rounded to {}",pi.round());
+    println!("The value of pi till 2 decimal digits is : {pi:.2}");
+
 }
