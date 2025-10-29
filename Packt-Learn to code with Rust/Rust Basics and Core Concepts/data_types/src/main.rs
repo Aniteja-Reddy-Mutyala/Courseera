@@ -54,4 +54,10 @@ fn main() {
      numbers[0]=6;
      println!("The numbers are {:?}",numbers);
      dbg!(numbers);
+     let my_tuple:(&str,i32)= ("hi",1);
+     let message:&str=my_tuple.0;
+     let rank:i32=my_tuple.1;
+     let (message1,rank1)=my_tuple;
+     dbg!(message,rank);
+     dbg!(message1,rank1);
 }
