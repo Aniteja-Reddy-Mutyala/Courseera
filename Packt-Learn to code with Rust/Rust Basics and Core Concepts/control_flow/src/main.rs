@@ -51,4 +51,17 @@ fn main() {
         seconds -= 1;
        
     }
+    let mut new_seconds:i32=10;
+    while new_seconds > 0{
+         
+        
+        if new_seconds % 2 == 0 {
+            println!("{new_seconds} seconds skipped by 3 seconds");
+            new_seconds -=3;
+            continue;
+        }
+        println!("{new_seconds} seconds!");
+        new_seconds -= 1;
+       
+    }
 }
