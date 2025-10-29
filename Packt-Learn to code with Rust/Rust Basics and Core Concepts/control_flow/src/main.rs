@@ -13,4 +13,20 @@ fn main() {
         false => 40,
     };
     println!("The value is {value}");
+    let season:&str="winter";
+    if season == "summer"{
+        println!("School's out");
+    }
+    else if season == "winter"{
+        println!("So cold");
+    }
+    else {
+        println!("Rain!!!");
+    }
+    match season {
+        "summer" => println!("School's out"),
+        "winter" => println!("So cold"),
+         _ => println!("Lots of rain"),
+        
+    };
 }
