@@ -60,4 +60,14 @@ fn main() {
      let (message1,rank1)=my_tuple;
      dbg!(message,rank);
      dbg!(message1,rank1);
+     let month_days=1..31;
+     let month_days_i = 1..=31;
+     for number in month_days{
+        println!("{number}");
+        
+     }
+     let letters='a'..'g';
+     for letter in letters{
+        println!("{letter}");
+     }
 }
