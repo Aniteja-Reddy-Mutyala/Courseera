@@ -35,4 +35,13 @@ fn main() {
         check_number if check_number % 2 != 0 => println!("{check_number} is an odd number"),
         _ => unreachable!(),
     };
+    let mut seconds:i32=10;
+    loop{
+        println!("{seconds} seconds!");
+        seconds -= 1;
+        if seconds < 0{
+            println!(" let s start");
+            break;
+        }
+    }
 }
