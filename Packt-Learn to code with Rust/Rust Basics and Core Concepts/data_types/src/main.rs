@@ -47,4 +47,6 @@ fn main() {
      let first_initial='a';
      let emoji:char= '😁';
      println!("{} {}",first_initial.is_alphabetic(),emoji.is_alphabetic());
+     let numbers:[i32;5]=[1,2,3,4,5];
+     println!("The numbers are {:?}",numbers);
 }
