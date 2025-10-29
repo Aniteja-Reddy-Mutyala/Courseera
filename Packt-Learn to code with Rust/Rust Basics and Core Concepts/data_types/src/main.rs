@@ -33,5 +33,10 @@ fn main() {
      println!("The new year is {year}");
      year -=2;
      println!("Last year is {year}");
-
+     let happy:bool=true;
+     println!("Am i happy?{happy}");
+     let voting_age:i32=18;
+     let my_age:i32=29;
+     let am_i_eligible_to_vote:bool= my_age>voting_age;
+     println!(" It is {am_i_eligible_to_vote} that i can vote");
 }
