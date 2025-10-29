@@ -64,4 +64,13 @@ fn main() {
         new_seconds -= 1;
        
     }
+    count_down(7);
+}
+fn count_down(  seconds:i32){
+    if seconds <= 0{
+       return  println!("Exiting count_ down function");
+        
+    }
+    println!("{seconds} more seconds inside count_down function ");
+    count_down(seconds -1);
 }
