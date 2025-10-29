@@ -1,12 +1,16 @@
 fn main() {
-   let result=even_or_odd(10);
-   println!("It is {result} that the number is even");
-}
-fn even_or_odd(number:i32)->bool{
-    if number % 2 == 0{
-       return true;
+    let evaluation: bool = true;
+    match evaluation {
+        true => {
+            println!("The evaluation is {evaluation}");
+        }
+        false => {
+            println!("The evaluation is {evaluation}");
+        }
     }
-    else{
-        return false;
-    }
+    let value: i32 = match evaluation {
+        true => 20,
+        false => 40,
+    };
+    println!("The value is {value}");
 }
