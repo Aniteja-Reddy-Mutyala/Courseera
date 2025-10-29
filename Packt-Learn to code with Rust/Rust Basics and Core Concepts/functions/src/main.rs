@@ -1,8 +1,8 @@
 fn main() {
-    open_store();
+    open_store("Monroe");
 }
-fn open_store(){
-    println!("Welcome to my store");
+fn open_store(neighbour:&str){
+    println!("Welcome to my store in {neighbour}");
     about_store();
 }
 fn about_store(){
