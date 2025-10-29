@@ -1,8 +1,8 @@
-
-
 fn main() {
-    dbg!(square(10));
-}
-fn square(number:i32)->i32{
-    return number *number;
+   let value:i32=10;
+   let calculate:i32={
+    let  result:i32=5;
+    result+value
+   };
+   dbg!(calculate);
 }
