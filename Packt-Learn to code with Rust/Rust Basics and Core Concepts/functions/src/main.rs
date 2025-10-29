@@ -1,14 +1,8 @@
+
+
 fn main() {
-    open_store("Monroe");
+    dbg!(square(10));
 }
-fn open_store(neighbour:&str){
-    println!("Welcome to my store in {neighbour}");
-    about_store();
-}
-fn about_store(){
-    println!("This is my store");
-    thank_you();
-}
-fn thank_you(){
-    println!("Thank you for visiting my store");
+fn square(number:i32)->i32{
+    return number *number;
 }
