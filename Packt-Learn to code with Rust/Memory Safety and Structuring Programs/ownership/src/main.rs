@@ -12,6 +12,8 @@ fn main() {
 
     let person:String=String::from("Ani");
     let ani:String=person;
+    
     println!("{ani}");
+    drop(ani);
 
 }
