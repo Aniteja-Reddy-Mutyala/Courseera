@@ -13,10 +13,11 @@ fn main() {
    let three:&i32=&one;
    println!("{three}");
   let apples:String=String::from("oranges");
-  print_my_value(apples);
-   println!("{apples}");
+   let cake=bake_cake();
+   println!(" I now have a cake named {cake}");
 }
 
-fn print_my_value(value:String){
-    println!("My value is {value}");
+fn bake_cake()->String{
+   let cake:String=String::from("Moose");
+   return cake;
 }
