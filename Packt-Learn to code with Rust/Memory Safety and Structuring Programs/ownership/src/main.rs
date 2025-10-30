@@ -1,19 +1,11 @@
 fn main() {
-   let mut food:&str="apple";
-   println!("{food}");
-   food="banana";
-   println!("{food}");
-   let text=String::new();
-    let mut new_text:String=String::from("Hello");
-    let len:i32=new_text.capacity().try_into().unwrap();
-    println!("{len}");
-    new_text.push_str("Everyone");
-    println!("{new_text}");
-
-    let person:String=String::from("Ani");
-    let ani:&String=&person;
-    
-    println!("{ani}");
-    
+   let my_value:i32=10;
+   let reference:&i32=&my_value;
+   println!("{}",*reference);
+    let my_string_value=String::from("Welcome");
+    let borrowed_value:&String=&my_string_value;
+   
+    println!("{borrowed_value:p}");
+   
 
 }
