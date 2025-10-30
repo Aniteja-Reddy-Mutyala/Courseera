@@ -11,9 +11,9 @@ fn main() {
     println!("{new_text}");
 
     let person:String=String::from("Ani");
-    let ani:String=person;
+    let ani:&String=&person;
     
     println!("{ani}");
-    drop(ani);
+    
 
 }
