@@ -10,4 +10,8 @@ fn main() {
     new_text.push_str("Everyone");
     println!("{new_text}");
 
+    let person:String=String::from("Ani");
+    let ani:String=person;
+    println!("{ani}");
+
 }
