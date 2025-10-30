@@ -19,5 +19,5 @@ fn main() {
 
 fn bake_cake()->String{
    let cake:String=String::from("Moose");
-   return cake;
+    cake
 }
