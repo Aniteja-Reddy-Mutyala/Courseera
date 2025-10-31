@@ -8,5 +8,9 @@ fn main() {
     let action_hero="Batman";
         &action_hero[0..5]
    };
+    let length=first_part.len();
+    println!("{length}");
+    let food="🍕";
+    println!("{}",food.len());
 
 }
