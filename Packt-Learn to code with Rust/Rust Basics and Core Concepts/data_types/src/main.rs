@@ -1,0 +1,73 @@
+fn main() {
+    println!("Hi Everyone.\n.I am in new line");
+    println!("I said \"Hi everyone\"");
+    let path=r"HI.\n";
+    println!("{path}");
+    let value:i32=-20;
+    println!("{}",value.abs());
+    let empty_space:&str="       messsage  ";
+    println!("{}",empty_space.trim());
+    println!("{}",value.pow(3));
+    let pi:f64=3.141598908765544321213445677888;
+    println!("The value of pi is : {pi}");
+    println!("Floor of the pi is {}",pi.floor());
+    println!("Ceil of pi is {}",pi.ceil());
+    println!("Pi is rounded to {}",pi.round());
+    println!("The value of pi till 2 decimal digits is : {pi:.2}");
+   
+    // let miles_i8=miles as i8;
+    let miles=100.01;
+    let miles_int=miles as i32;
+    println!("My miles is {miles_int}");
+    let addition = 9+7;
+    let subtraction = 9 - 7;
+    let multiplication = 9 * 7;
+    println!("Addition {addition},Subtraction {subtraction},product {multiplication}");
+    let floor_division:i32 = 9 / 7;
+    let decimal_division:f64 = 9.0 / 7.0;
+    println!("Decimal division {decimal_division} ,floor division {floor_division}");
+    let modulo_division:i32= 9 % 7;
+    println!("Modulo division {modulo_division}");
+    let mut year:i32=2025;
+     year +=1;
+     println!("The new year is {year}");
+     year -=2;
+     println!("Last year is {year}");
+     let happy:bool=true;
+     println!("Am i happy?{happy}");
+     let voting_age:i32=18;
+     let my_age:i32=29;
+     let am_i_eligible_to_vote:bool= my_age>voting_age;
+     println!(" It is {am_i_eligible_to_vote} that i'am of voting age");
+     println!("{}",5>=6);
+     println!("{}",false==false);
+     let citizen:bool=false;
+     let can_vote= am_i_eligible_to_vote&& citizen;
+     println!("It is {can_vote} that i can vote");
+     let first_initial='a';
+     let emoji:char= '😁';
+     println!("{} {}",first_initial.is_alphabetic(),emoji.is_alphabetic());
+     let mut numbers:[i32;5]=[1,2,3,4,5];
+     let first_number:i32=numbers[0];
+     let second_number:i32=numbers[1];
+     println!("First number is {first_number} ,second number is {second_number}");
+     numbers[0]=6;
+     println!("The numbers are {:?}",numbers);
+     dbg!(numbers);
+     let my_tuple:(&str,i32)= ("hi",1);
+     let message:&str=my_tuple.0;
+     let rank:i32=my_tuple.1;
+     let (message1,rank1)=my_tuple;
+     dbg!(message,rank);
+     dbg!(message1,rank1);
+     let month_days:std::ops::Range<i32>=1..31;
+     let month_days_i:std::ops::RangeInclusive<i32> = 1..=31;
+     for number in month_days{
+        println!("{number}");
+        
+     }
+     let letters:std::ops::Range<char>='a'..'g';
+     for letter in letters{
+        println!("{letter}");
+     }
+}
