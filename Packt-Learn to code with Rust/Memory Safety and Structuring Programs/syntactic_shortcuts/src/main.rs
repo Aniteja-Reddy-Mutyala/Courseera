@@ -9,7 +9,9 @@ fn main() {
    let action_hero_ref=&action_hero;
    do_hero_stuff(action_hero_ref);
    println!("{action_hero_ref}");
-   
+   let values = [2,3,7,4,5];
+   let my_slice=&values[2..4];
+   println!("My slice is {my_slice:?}");
 
 }
 fn do_hero_stuff(hero_name:&str){
