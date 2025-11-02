@@ -6,5 +6,12 @@ fn main() {
    println!("Last hero is {second_hero}");
    let full_name:&str=&action_hero[..];
    println!("Full names are {full_name}");
-   println!("{full_name}");
+   let action_hero_ref=&action_hero;
+   do_hero_stuff(action_hero_ref);
+   println!("{action_hero_ref}");
+   
+
+}
+fn do_hero_stuff(hero_name:&str){
+    println!("{hero_name} saves the day");
 }
