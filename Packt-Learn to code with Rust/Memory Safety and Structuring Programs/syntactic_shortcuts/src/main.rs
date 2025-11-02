@@ -12,8 +12,13 @@ fn main() {
    let values = [2,3,7,4,5];
    let my_slice=&values[2..4];
    println!("My slice is {my_slice:?}");
+   print_length(my_slice);
+ 
 
 }
 fn do_hero_stuff(hero_name:&str){
     println!("{hero_name} saves the day");
+}
+fn print_length(slice:&[i32]){
+    println!("length is {}",slice.len());
 }
