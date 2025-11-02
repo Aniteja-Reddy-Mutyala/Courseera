@@ -13,6 +13,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 // simulateBirthdays checks if any two people in a group share a birthday
@@ -45,6 +46,7 @@ func calculateProbability(numPeople, numTrials int) float64 {
 }
 
 func main() {
+	rand.Seed(time.Now().UnixNano())  // Seed for different results each run
 	const numTrials = 10000
 	
 	fmt.Println("Birthday Paradox Probability Simulation")
