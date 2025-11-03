@@ -13,7 +13,13 @@ fn main() {
    let my_slice=&values[2..4];
    println!("My slice is {my_slice:?}");
    print_length(my_slice);
- 
+   let mut my_array=[10,20,30,40,50];
+   let my_array_slice=& mut my_array[2..4];
+   my_array_slice[1]=25;
+   println!("My array slice after modifiying {my_array_slice:?}");
+
+    
+
 
 }
 fn do_hero_stuff(hero_name:&str){
