@@ -17,6 +17,10 @@ impl TaylorSwiftSong{
            println!("The release year is {}",self.release_year);
            println!("The duration is {}",self.duration_secs);
     }
+    fn double_length(mut self){
+          self.duration_secs=2 *self.duration_secs;
+          println!("{:?}",self);
+    }
 }
 fn main() {
     let mut mocha: Coffee = Coffee {
@@ -30,6 +34,12 @@ fn main() {
         duration_secs:231
     };
     song.display_song_info();
+    let  song1 = TaylorSwiftSong{
+        title:String::from("Blank space"),
+        release_year:2014,
+        duration_secs:120
+    };
+    song1.double_length();
     
     let latte = make_coffee(String::from("Latte"), 3.99, true);
     println!(
