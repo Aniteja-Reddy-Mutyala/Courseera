@@ -12,6 +12,9 @@ struct TaylorSwiftSong {
 }
 
 impl TaylorSwiftSong{
+    fn new(title:String,release_year:u32,duration_secs:u32)-> Self{
+        TaylorSwiftSong { title, release_year, duration_secs }
+    }
     fn display_song_info(&self){
            println!("The name of song is {}",self.title);
            println!("Years since release {}",self.years_since_release());
@@ -50,7 +53,8 @@ fn main() {
     let two: bool=song.is_longer_than(&song1);
     println!("{one},{two}");
 
-    
+    let song2 =TaylorSwiftSong::new(String::from("Shake it off ") ,2015,210);
+    song2.display_song_info();
     let latte = make_coffee(String::from("Latte"), 3.99, true);
     println!(
         "My morning {} costs {} and it is {} that it was hot.",
