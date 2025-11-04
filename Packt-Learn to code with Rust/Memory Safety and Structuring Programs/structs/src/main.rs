@@ -21,6 +21,9 @@ impl TaylorSwiftSong{
           self.duration_secs=2 *self.duration_secs;
           
     }
+    fn is_longer_than(&self,other:&Self) -> bool{
+             self.duration_secs > other.duration_secs
+    }
 }
 fn main() {
     let mut mocha: Coffee = Coffee {
@@ -39,7 +42,11 @@ fn main() {
         release_year:2014,
         duration_secs:120
     };
+    let one :bool=song.is_longer_than(&song1);
     song1.double_length();
+    let two: bool=song.is_longer_than(&song1);
+    println!("{one},{two}");
+
     
     let latte = make_coffee(String::from("Latte"), 3.99, true);
     println!(
