@@ -42,4 +42,5 @@ fn make_coffee(name: String, price: f64, is_hot: bool) -> Coffee {
 }*/
 fn drink_coffee(coffee:& mut Coffee){
     println!("Drinking my delicious {}", (*coffee).name);
+    
 }
