@@ -4,12 +4,33 @@ struct Coffee {
     name: String,
     is_hot: bool,
 }
+#[derive(Debug)]
+struct TaylorSwiftSong {
+    title:String,
+    release_year:u32,
+    duration_secs:u32
+}
+
+impl TaylorSwiftSong{
+    fn display_song_info(self:Self){
+           println!("The name of song is {}",self.title);
+           println!("The release year is {}",self.release_year);
+           println!("The duration is {}",self.duration_secs);
+    }
+}
 fn main() {
     let mut mocha: Coffee = Coffee {
         price: 4.99,
         name: String::from("Mocha"),
         is_hot: false,
     };
+    let song=TaylorSwiftSong{
+        title:String::from("Blank space"),
+        release_year:2014,
+        duration_secs:231
+    };
+    song.display_song_info();
+    
     let latte = make_coffee(String::from("Latte"), 3.99, true);
     println!(
         "My morning {} costs {} and it is {} that it was hot.",
