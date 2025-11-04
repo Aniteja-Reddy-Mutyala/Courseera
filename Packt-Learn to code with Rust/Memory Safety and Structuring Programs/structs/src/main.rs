@@ -14,8 +14,8 @@ struct TaylorSwiftSong {
 impl TaylorSwiftSong{
     fn display_song_info(&self){
            println!("The name of song is {}",self.title);
-           println!("The release year is {}",self.release_year);
-           println!("The duration is {}",self.duration_secs);
+           println!("Years since release {}",self.years_since_release());
+           println!("The duration is {} seconds",self.duration_secs);
     }
     fn double_length(&mut self){
           self.duration_secs=2 *self.duration_secs;
@@ -23,6 +23,9 @@ impl TaylorSwiftSong{
     }
     fn is_longer_than(&self,other:&Self) -> bool{
              self.duration_secs > other.duration_secs
+    }
+    fn years_since_release(&self) ->u32{
+        2025-self.release_year
     }
 }
 fn main() {
