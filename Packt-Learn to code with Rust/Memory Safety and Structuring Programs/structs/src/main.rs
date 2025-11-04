@@ -12,14 +12,14 @@ struct TaylorSwiftSong {
 }
 
 impl TaylorSwiftSong{
-    fn display_song_info(self:Self){
+    fn display_song_info(&self){
            println!("The name of song is {}",self.title);
            println!("The release year is {}",self.release_year);
            println!("The duration is {}",self.duration_secs);
     }
-    fn double_length(mut self){
+    fn double_length(&mut self){
           self.duration_secs=2 *self.duration_secs;
-          println!("{:?}",self);
+          
     }
 }
 fn main() {
@@ -34,7 +34,7 @@ fn main() {
         duration_secs:231
     };
     song.display_song_info();
-    let  song1 = TaylorSwiftSong{
+    let  mut song1 = TaylorSwiftSong{
         title:String::from("Blank space"),
         release_year:2014,
         duration_secs:120
