@@ -1,21 +1,35 @@
 package main
-import "fmt"
+import ("fmt"
+   "math/rand"
+   "time"
+)
 func main(){
-	fmt.Println("Results of if");
-	x :=5;
-	y :=6;
-	i :=3;
-	fmt.Println("x is ",x," y is ",y)
-	if x<y{
-		fmt.Println("x < y");
-	}else{
-       fmt.Println("x => y");
-	}
-	if i :=9; i < x{
-		fmt.Println(" i < x", " i is ",i," x is ",x);
+	var move rune;
+	fmt.Println("Enter either R P or S");
+	fmt.Scanf("%c",&move);
+	if move == 'R'{
+		fmt.Printf("My move is %c\n ",move);
+
+	} else if move == 'P'{
+		fmt.Printf("My move is %c \n",move);
+	} else if move == 'S'{
+		fmt.Printf("My move is %c\n",move);
 	} else{
-		fmt.Println("i >=x","i is ",i,"x is ",x);
+		fmt.Printf("Illegal move is %c\n",move);
 	}
-	fmt.Println(" i is ",i);
+     rand.Seed(time.Now().UnixNano())
+	 machineMove := rand.Intn(3);
+	 if machineMove==0 && move =='R'{
+		fmt.Println("Machine wins");
+	 } else if machineMove == 1 && move =='S'{
+		fmt.Println("Machine wins");
+	 } else if machineMove == 2 && move =='P'{
+		fmt.Println("Machine wins");
+
+	 } else {
+		fmt.Println("Draw or you win");
+	 }
+
+	
 
 }
