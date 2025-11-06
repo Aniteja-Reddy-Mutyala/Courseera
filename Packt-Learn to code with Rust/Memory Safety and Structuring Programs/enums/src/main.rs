@@ -40,6 +40,19 @@ impl OrderOnlineStatus{
     }
    }
 }
+enum Milk{
+    LowFat(i32),
+    WholeMilk
+}
+impl Milk{
+    fn drink(self){
+        match self{
+            Milk::LowFat(2) =>{println!("Delicious!!!2% milk is excellent");},
+            Milk::WholeMilk =>{println!("Whole milk");},
+            Milk::LowFat(percent)=>{println!("You got lowfat {percent}% milk");}
+        }
+    }
+}
 fn main(){
     let my_os=OperatingSystem::MacOS;
     let age_os= years_since_release(my_os);
@@ -62,6 +75,12 @@ fn main(){
     shipped_item.check();
     let delivered_item=OrderOnlineStatus::Delivered;
     delivered_item.check();
+    let whole_milk=Milk::WholeMilk;
+    whole_milk.drink();
+    let two_percent=Milk::LowFat(2);
+    two_percent.drink();
+    let low_fat=Milk::LowFat(10);
+    low_fat.drink();
 
 }
 fn years_since_release(os:OperatingSystem)->u32{
