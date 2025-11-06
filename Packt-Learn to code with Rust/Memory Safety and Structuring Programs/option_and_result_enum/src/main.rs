@@ -21,8 +21,8 @@ fn main() {
    let availability=is_item_in_stock(true,false);
    println!("{availability:?}");
    match availability{
-      Option::Some(value)=>{println!("The item is available:{value}");}
-      Option::None=>{println!("The item doesn't exist in our system");}
+      Some(value)=>{println!("The item is available:{value}");}
+      None=>{println!("The item doesn't exist in our system");}
    }
    
 }
