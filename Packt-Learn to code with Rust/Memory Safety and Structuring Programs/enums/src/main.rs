@@ -1,3 +1,5 @@
+use std::fs::Permissions;
+
 #[derive(Debug)]
 enum OperatingSystem{
     Windows,
@@ -76,11 +78,20 @@ fn main(){
     let delivered_item=OrderOnlineStatus::Delivered;
     delivered_item.check();
     let whole_milk=Milk::WholeMilk;
-    whole_milk.drink();
+    //whole_milk.drink();
+       if let Milk::WholeMilk= whole_milk{
+        println!("Yor milk is whole milk");
+       }
     let two_percent=Milk::LowFat(2);
-    two_percent.drink();
+    //two_percent.drink();
+    if let Milk::LowFat(percent)= two_percent{
+        println!("Your milk is {percent}% milk");
+    }
     let low_fat=Milk::LowFat(10);
-    low_fat.drink();
+    //low_fat.drink();
+    if let Milk::LowFat(2)  =low_fat  {
+        println!("Low fat milk");
+    }
 
 }
 fn years_since_release(os:OperatingSystem)->u32{
