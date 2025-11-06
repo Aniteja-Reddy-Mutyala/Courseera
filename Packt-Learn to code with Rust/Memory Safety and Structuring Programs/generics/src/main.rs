@@ -24,6 +24,10 @@ fn identity<T>(value: T) -> T {
 fn make_tuple<T, U>(first: T, second: U) -> (T, U) {
     (first, second)
 }
+enum Cheesesteak<T>{
+    Plain,
+    Topping(T),
+}
 fn main() {
     println!("Hello, world!");
     let i32_value = identity::<u32>(5);
@@ -55,6 +59,11 @@ fn main() {
     println!("{gold_chest:?}");
     println!("{silver_chest:?}");
     println!("{length}");
+    let mushroom=Cheesesteak::Topping("mushroom");
+    let onions =Cheesesteak::Topping("onions".to_string());
+    let toppings="bacon".to_string();
+    let bacon =Cheesesteak::Topping(&toppings);
+    let plain:Cheesesteak<String>=Cheesesteak::Plain;
 
 
 }
