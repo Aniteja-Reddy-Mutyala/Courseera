@@ -3,6 +3,21 @@ struct TreasureChest<T> {
     captain: String,
     treasure: T,
 }
+impl TreasureChest<String>{
+    fn clean_treasure(&mut self){
+       self.treasure= self.treasure.trim().to_string();
+    }
+}
+impl TreasureChest<[&str;3]>{
+   fn amount_of_treasure(&mut self)->usize{
+    self.treasure.len()
+   }
+}
+impl <T> TreasureChest<T>{
+    fn capital_captain(& mut self){
+        self.captain=self.captain.to_uppercase();
+    }
+}
 fn identity<T>(value: T) -> T {
     value
 }
@@ -19,21 +34,27 @@ fn main() {
     println!("Identity is {f64_value}");
     let new_tuple = make_tuple(String::from("hello"), 10);
     println!("{new_tuple:?}");
-    let gold_chest=TreasureChest{
+    let mut gold_chest=TreasureChest{
         captain:String::from("Goldberg"),
         treasure:"Gold"
     };
-    let silver_chest=TreasureChest{
+    gold_chest.capital_captain();
+    let mut silver_chest=TreasureChest{
         captain:String::from("Silverberg"),
-        treasure:String::from("Silver")
+        treasure:String::from("   Silver    ")
     };
-    let special_chest=TreasureChest{
+    silver_chest.clean_treasure();
+    silver_chest.capital_captain();
+    let mut  special_chest=TreasureChest{
         captain:String::from("special"),
         treasure:["Gold","Silver","Platinum"]
     };
+    special_chest.capital_captain();
+    let length=special_chest.amount_of_treasure();
     println!("{special_chest:?}");
     println!("{gold_chest:?}");
     println!("{silver_chest:?}");
+    println!("{length}");
 
 
 }
