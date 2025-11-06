@@ -22,7 +22,24 @@ fn wash_laundry(self:&Self){
   }
 }
 }
-
+#[derive(Debug)]
+enum OrderOnlineStatus{
+    Ordered,
+    Packed,
+    Shipped,
+    Delivered
+}
+impl OrderOnlineStatus{
+   fn check(self:&Self){
+    match self{
+       /* OrderOnlineStatus::Ordered | OrderOnlineStatus::Packed =>{
+            println!("Your item is being prepped for shipment");
+        }*/
+        OrderOnlineStatus::Delivered=>{println!("Your item has been delivered");}
+        order_status=>{println!("Your item is {order_status:?}");}
+    }
+   }
+}
 fn main(){
     let my_os=OperatingSystem::MacOS;
     let age_os= years_since_release(my_os);
@@ -39,6 +56,12 @@ fn main(){
     // wash_laundry(LaundryCycle::Cold);
     //wash_laundry(LaundryCycle::Hot { temperature:55 });
     //wash_laundry(LaundryCycle::Delicate(String::from("Silk")));
+    let item=OrderOnlineStatus::Ordered;
+    item.check();
+    let shipped_item=OrderOnlineStatus::Shipped;
+    shipped_item.check();
+    let delivered_item=OrderOnlineStatus::Delivered;
+    delivered_item.check();
 
 }
 fn years_since_release(os:OperatingSystem)->u32{
