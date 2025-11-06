@@ -42,6 +42,7 @@ impl OrderOnlineStatus{
     }
    }
 }
+#[derive(Debug)]
 enum Milk{
     LowFat(i32),
     WholeMilk
@@ -79,9 +80,10 @@ fn main(){
     delivered_item.check();
     let whole_milk=Milk::WholeMilk;
     //whole_milk.drink();
-       if let Milk::WholeMilk= whole_milk{
+        let Milk::LowFat(percent)= whole_milk else{
         println!("Yor milk is whole milk");
-       }
+        return;
+       };
     let two_percent=Milk::LowFat(2);
     //two_percent.drink();
     if let Milk::LowFat(percent)= two_percent{
@@ -91,6 +93,8 @@ fn main(){
     //low_fat.drink();
     if let Milk::LowFat(2)  =low_fat  {
         println!("Low fat milk");
+    }else{
+        println!("The milk is not low fat milk as it is {percent}");
     }
 
 }
