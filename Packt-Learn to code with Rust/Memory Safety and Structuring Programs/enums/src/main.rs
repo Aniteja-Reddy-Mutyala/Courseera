@@ -5,6 +5,12 @@ enum CardSuit{
     Spades,
     Clubs
 }
+#[derive(Debug)]
+enum PaymentMethodType{
+    CreditCard(String),
+    DebitCard(String),
+    PayPal(String)
+}
 struct Card{
     rank:String,
     suit:CardSuit
@@ -15,4 +21,8 @@ fn main() {
     second_card=CardSuit::Diamonds;
     println!("{second_card:?}");
     let card_suits=[CardSuit::Clubs,CardSuit::Spades];
+    let visa =PaymentMethodType::CreditCard(String::from("1234-5678"));
+    let master_card=PaymentMethodType::DebitCard(String::from("5678-9012"));
+    println!("{visa:?}");
+    println!("{master_card:?}");
 }
