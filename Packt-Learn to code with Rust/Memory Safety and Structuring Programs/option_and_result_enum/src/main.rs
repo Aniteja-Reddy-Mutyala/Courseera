@@ -1,4 +1,4 @@
-#[derive(Debug,Copy,Clone)]
+/*#[derive(Debug,Copy,Clone)]
 enum MyOption{
    Some(i32),
    None
@@ -64,4 +64,11 @@ fn is_item_in_stock(item_is_in_system:bool,item_is_in_stock:bool)->Option<bool>{
   else{
      Option::None
   }
+}*/
+fn main(){
+   let ok:Result<i32,&str> =Result::Ok(5);
+   println!("{ok:?}");
+   let disaster:Result<i32, &str>=Result::Err("Something went wrong");
+   println!("{disaster:?}");
+
 }
