@@ -1,3 +1,23 @@
+#[derive(Debug,Copy,Clone)]
+enum MyOption{
+   Some(i32),
+   None
+}
+impl MyOption{
+   fn unwrap(self)->i32{
+      match self{
+         MyOption::Some(value)=>{value},
+         MyOption::None=>{panic!("No!!!")}
+      }
+
+   }
+   fn unwrap_or(self,default_value:i32)->i32{
+      match self{
+         MyOption::Some(value)=>{value},
+         MyOption::None=>{default_value},
+      }
+   }
+}
 fn main() {
   
    /*let musical_instruments=[
@@ -28,7 +48,10 @@ fn main() {
    let missing_value:Option<i32>=Option::None;
    println!("The value is {}",present_value.unwrap_or(0));
    println!("The value is {}",missing_value.unwrap_or(0));
-
+   let some_option=MyOption::Some(50);
+   println!("{}",some_option.unwrap());
+   let none_option:MyOption=MyOption::None;
+   println!("{}",none_option.unwrap_or(0));
    
 }
 fn is_item_in_stock(item_is_in_system:bool,item_is_in_stock:bool)->Option<bool>{
