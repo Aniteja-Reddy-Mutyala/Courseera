@@ -78,12 +78,13 @@ fn main(){
    let text:&str="Hello";
    let text_as_num:Result<i32,ParseIntError>=text.parse();
    println!("{text_as_num:?}");
-   let answer=divide(5.0, 2.0);
+   let answer=divide(5.0, 0.0);
    println!("{answer:?}");
-   match answer{
+  /*  match answer{
       Result::Ok(value)=>{println!("result is {value}")}
       Result::Err(error)=>{println!("Error is: {error}")}
-   }
+   }*/
+  println!("{}",answer.unwrap_or(0.0));
 
 }
 fn divide(numerator:f64,denominator:f64)->Result<f64,String>{
