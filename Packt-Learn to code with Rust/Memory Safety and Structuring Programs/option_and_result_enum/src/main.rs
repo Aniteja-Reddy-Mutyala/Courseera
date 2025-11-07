@@ -24,6 +24,11 @@ fn main() {
       Some(value)=>{println!("The item is available:{value}");}
       None=>{println!("The item doesn't exist in our system");}
    }
+   let present_value=Option::Some(15);
+   let missing_value:Option<i32>=Option::None;
+   println!("The value is {}",present_value.unwrap_or(0));
+   println!("The value is {}",missing_value.unwrap_or(0));
+
    
 }
 fn is_item_in_stock(item_is_in_system:bool,item_is_in_stock:bool)->Option<bool>{
