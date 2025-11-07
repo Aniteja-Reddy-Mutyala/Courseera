@@ -10,6 +10,13 @@ fn main() {
    println!("{pizza_diameters:?}");
    pizza_diameters.remove(3);
      println!("{pizza_diameters:?}");
-   let pasta = vec!["hi","this","is","vector"];
+   let pasta = vec!["hi".to_string(),"this".to_string(),"is".to_string(),"vector".to_string()];
+   let _hi=&pasta[0];
+   let is=pasta.get(4);
    println!("{pasta:?}");
+//    println!("{is:?}");
+   match is{
+    Option::Some(value)=>{println!("the value is {value}");}
+    Option::None=>{println!("Error");}
+   }
 }
