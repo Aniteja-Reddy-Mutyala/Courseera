@@ -1,3 +1,5 @@
+use std::num::ParseIntError;
+
 /*#[derive(Debug,Copy,Clone)]
 enum MyOption{
    Some(i32),
@@ -70,5 +72,11 @@ fn main(){
    println!("{ok:?}");
    let disaster:Result<i32, &str>=Result::Err("Something went wrong");
    println!("{disaster:?}");
+   let text:&str="50";
+   let text_as_num=text.parse::<i32>();
+   println!("{text_as_num:?}");
+   let text:&str="Hello";
+   let text_as_num:Result<i32,ParseIntError>=text.parse();
+   println!("{text_as_num:?}");
 
 }
