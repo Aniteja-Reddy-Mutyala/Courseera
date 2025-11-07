@@ -85,6 +85,12 @@ fn main(){
       Result::Err(error)=>{println!("Error is: {error}")}
    }*/
   println!("{}",answer.unwrap_or(0.0));
+  let my_result=operation(true);
+  let content =match &my_result{
+   Result::Ok(message)=>{message}
+   Result::Err(error)=>{error}
+  };
+  println!("{my_result:?}");
 
 }
 fn divide(numerator:f64,denominator:f64)->Result<f64,String>{
@@ -94,4 +100,11 @@ fn divide(numerator:f64,denominator:f64)->Result<f64,String>{
     else{
       Result::Ok(numerator/denominator)
     }
+}
+fn operation(great_success:bool)->Result<String,String>{
+   if great_success{
+      Result::Ok(String::from("Great success"))
+   }else{
+      Result::Err("Error".to_string())
+   }
 }
