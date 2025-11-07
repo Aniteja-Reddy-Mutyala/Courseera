@@ -10,7 +10,7 @@ fn main() {
    println!("{pizza_diameters:?}");
    pizza_diameters.remove(3);
      println!("{pizza_diameters:?}");
-   let pasta = vec!["hi".to_string(),"this".to_string(),"is".to_string(),"vector".to_string()];
+   let mut pasta = vec!["hi".to_string(),"this".to_string(),"is".to_string(),"vector".to_string()];
    let _hi=&pasta[0];
    let is=pasta.get(4);
    println!("{pasta:?}");
@@ -19,4 +19,12 @@ fn main() {
     Option::Some(value)=>{println!("the value is {value}");}
     Option::None=>{println!("Error");}
    }
+   pasta[1]="Mushroom".to_string();
+   println!("{pasta:?}");
+   pasta.push("olives".to_string());
+   println!("{pasta:?}");
+   let new_toppings=& mut pasta[1];
+   *new_toppings="Meatballs".to_string();
+   println!("{pasta:?}");
+
 }
