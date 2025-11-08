@@ -1,6 +1,6 @@
 mod inventory;
 mod orders;
-use inventory::products::{Item, ProductCategory};
+use inventory::{Item, ProductCategory};
 use inventory::{FLOOR_SPACE,MANAGER as  INVENTORY_MANAGER};
 use orders::MANAGER as ORDERS_MANAGER;
 
