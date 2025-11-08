@@ -11,11 +11,11 @@ fn main() {
         inventory::FLOOR_SPACE
     );
     inventory::talk_to_manager();
-    let my_favourite_product = inventory::ProductCategory::Hammer;
+    let my_favourite_product = inventory::products::ProductCategory::Hammer;
     println!("{my_favourite_product:?}");
-    let check = inventory::ProductCategory::Hammer;
+    let check = inventory::products::ProductCategory::Hammer;
     println!("{check:?}");
-    let tall_ladder = inventory::Item {
+    let tall_ladder = inventory::products::Item {
         name: String::from("Huge ladder"),
         category: my_favourite_product,
         quantity: 100,
