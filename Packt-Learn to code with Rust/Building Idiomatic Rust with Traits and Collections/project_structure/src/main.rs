@@ -1,6 +1,6 @@
 mod inventory {
     const FLOOR_SPACE:i32=10000;
-    const MANAGER:&str="My inventory";
+     pub const MANAGER:&str="Aniteja inventory";
     #[derive(Debug)]
     enum ProductCategory{
         Ladder,
@@ -17,5 +17,5 @@ mod inventory {
     }
 }
 fn main() {
-    println!("Hello, world!");
+    println!("Hi {}",inventory::MANAGER);
 }
