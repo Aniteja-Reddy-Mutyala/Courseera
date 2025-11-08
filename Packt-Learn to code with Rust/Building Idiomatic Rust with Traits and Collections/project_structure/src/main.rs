@@ -1,13 +1,9 @@
-mod inventory;
-mod orders;
-use inventory::{Item, ProductCategory};
-use inventory::{FLOOR_SPACE,MANAGER as  INVENTORY_MANAGER};
-use orders::MANAGER as ORDERS_MANAGER;
+
 use fake::{Fake,Faker};
-use std::collections::*;
+use warehouse::{Item,ProductCategory,FLOOR_SPACE,ORDERS_MANAGER,INVENTORY_MANAGER};
 fn main() {
-    println!("Hi {}", inventory::MANAGER);
-    println!("My orders manager is {}", orders::MANAGER);
+    println!("Hi {}", INVENTORY_MANAGER);
+    println!("My orders manager is {}", ORDERS_MANAGER);
     println!(
         "Our managers are {} and {}.We have room space for {} sft.",
         INVENTORY_MANAGER,
