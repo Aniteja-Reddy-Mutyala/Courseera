@@ -1,7 +1,7 @@
 mod inventory;
 mod orders;
-use inventory::products::{self,ProductCategory};
-use inventory::{FLOOR_SPACE,MANAGER,talk_to_manager};
+use inventory::products::{Item, ProductCategory};
+use inventory::{FLOOR_SPACE, MANAGER};
 
 fn main() {
     println!("Hi {}", inventory::MANAGER);
@@ -12,15 +12,12 @@ fn main() {
         orders::MANAGER,
         FLOOR_SPACE
     );
-    talk_to_manager();
+
     let my_favourite_product = ProductCategory::Hammer;
     println!("{my_favourite_product:?}");
     let check = ProductCategory::Hammer;
     println!("{check:?}");
-    let tall_ladder = products::Item {
-        name: String::from("Huge ladder"),
-        category: my_favourite_product,
-        quantity: 100,
-    };
+    let tall_ladder = Item::new(String::from("Huge ladder"), my_favourite_product, 100);
+
     println!("{tall_ladder:#?}");
 }
