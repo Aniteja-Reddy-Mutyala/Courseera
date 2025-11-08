@@ -1,15 +1,16 @@
 mod inventory;
 mod orders;
 use inventory::products::{Item, ProductCategory};
-use inventory::{FLOOR_SPACE, MANAGER};
+use inventory::{FLOOR_SPACE,MANAGER as  INVENTORY_MANAGER};
+use orders::MANAGER as ORDERS_MANAGER;
 
 fn main() {
     println!("Hi {}", inventory::MANAGER);
     println!("My orders manager is {}", orders::MANAGER);
     println!(
         "Our managers are {} and {}.We have room space for {} sft.",
-        MANAGER,
-        orders::MANAGER,
+        INVENTORY_MANAGER,
+        ORDERS_MANAGER,
         FLOOR_SPACE
     );
 
