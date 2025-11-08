@@ -3,7 +3,7 @@ mod orders;
 use inventory::{Item, ProductCategory};
 use inventory::{FLOOR_SPACE,MANAGER as  INVENTORY_MANAGER};
 use orders::MANAGER as ORDERS_MANAGER;
-
+use fake::{Fake,Faker};
 fn main() {
     println!("Hi {}", inventory::MANAGER);
     println!("My orders manager is {}", orders::MANAGER);
@@ -21,4 +21,6 @@ fn main() {
     let tall_ladder = Item::new(String::from("Huge ladder"), my_favourite_product, 100);
 
     println!("{tall_ladder:#?}");
+    let fake_item:Item=Faker.fake();
+    println!("{fake_item:?}");
 }
