@@ -6,9 +6,16 @@ fn main() {
     menu.insert("Tuna".to_string(), 29.99);
     menu.insert("Chicken".to_string(),25.99);
     println!("{menu:?}");
-    let mut country_capitals:HashMap<&str,&str>=HashMap::new();
-    country_capitals.insert("France","Paris");
-    country_capitals.insert("Germany","Berlin");
-    println!("{country_capitals:?}");
+    let capitals=[("France","Paris"),("Gernamy","Berlin")];
+    let mut country_capitals:HashMap<&str,&str>=HashMap::from(capitals);
+   // country_capitals.insert("France","Paris");
+   // country_capitals.insert("Germany","Berlin");
+   // println!("{country_capitals:?}");
+    match country_capitals.remove(&"Belgium"){
+        Option::Some(_)=>{println!("{country_capitals:?}");}
+        Option::None=>{println!("The country doesn't exist in the list");}
+    }
+
+    //println!("{country_capitals:?}");
 
 }
