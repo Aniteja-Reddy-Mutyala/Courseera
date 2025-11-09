@@ -17,6 +17,8 @@ fn main() {
     }
     let france_capital= country_capitals.get(&"France");
     println!("{}",france_capital.unwrap_or(&"Country doesn't exist in list"));
-    //println!("{country_capitals:?}");
+
+    country_capitals.entry("France").or_insert("paris");
+    println!("{country_capitals:?}");
 
 }
