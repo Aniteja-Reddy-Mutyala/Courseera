@@ -31,5 +31,19 @@ fn main() {
    println!("{}",concert_queue.remove(&"Megan"));
    println!("{}",concert_queue.contains(&"Megan"));
    println!("{:?}",concert_queue.get(&"Megan").unwrap_or(&"Doesn't exist"));
+   concert_queue.insert("Mellisa");
+   let mut  movie_queue:HashSet<&str>=HashSet::new();
+   movie_queue.insert("Mellisa");
+   movie_queue.insert("Phil");
+   println!("{:?}",concert_queue.union(&movie_queue));
+   println!("{:?}",movie_queue.union(&concert_queue));
+   println!("{:?}",concert_queue.difference(&movie_queue));
+   println!("{:?}",movie_queue.difference(&concert_queue));
+   println!("{:?}",concert_queue.symmetric_difference(&movie_queue));
+   println!("{:?}",concert_queue.is_disjoint(&movie_queue));
+   println!("{:?}",concert_queue.is_subset(&movie_queue));
+
+
+
 
 }
