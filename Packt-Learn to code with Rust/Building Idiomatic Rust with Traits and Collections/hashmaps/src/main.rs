@@ -15,7 +15,8 @@ fn main() {
         Option::Some(_)=>{println!("{country_capitals:?}");}
         Option::None=>{println!("The country doesn't exist in the list");}
     }
-
+    let france_capital= country_capitals.get(&"France");
+    println!("{}",france_capital.unwrap_or(&"Country doesn't exist in list"));
     //println!("{country_capitals:?}");
 
 }
