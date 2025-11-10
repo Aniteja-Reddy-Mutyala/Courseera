@@ -13,28 +13,30 @@ fn main() {
         }
     }
 }
-fn read_file() -> Result<String, Error> {
+fn read_file() -> Result<String,Error> {
     println!("Please enter the name of file");
     let mut input = String::new();
-    match stdin().read_line(&mut input) {
+    stdin().read_line(& mut input)?;
+   /*  match stdin().read_line(&mut input) {
         Result::Ok(_) => {}
         Result::Err(error) => {
             return Err(error);
         }
-    }
-    let mut file: File = match File::open(input.trim()) {
+    }*/
+    let mut file=File::open(input.trim())?;
+    /*let mut file: File = match File::open(input.trim()) {
         Result::Ok(file) => file,
         Result::Err(error) => {
             return Result::Err(error);
         }
-    };
+    };*/
     let mut file_content = String::new();
-    let read_operation = file.read_to_string(&mut file_content);
-    match read_operation {
+    file.read_to_string(&mut file_content)?;
+    /*match read_operation {
         Result::Ok(_) => {}
         Result::Err(error) => {
             return Result::Err(error);
         }
-    }
+    }*/
     Result::Ok(file_content)
 }
