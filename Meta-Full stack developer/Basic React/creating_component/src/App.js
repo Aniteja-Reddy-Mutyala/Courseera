@@ -5,7 +5,7 @@ import Header from './Header';
 function App() {
   return (
     <>
-    <Header title="Welcome"/>
+    <Header title="Welcome" color="purple"/>
     </>
   );
 }

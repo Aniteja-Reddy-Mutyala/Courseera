@@ -1,5 +1,5 @@
-function Header({title}){
-  return <h1>{title}</h1>
+function Header({title,color}){
+  return <h1 style={{color:color}}>{title}</h1>
 }
 
 export default Header
