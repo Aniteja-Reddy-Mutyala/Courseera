@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import DemoForm
 # Create your views here.
 from django.http import HttpResponse
 def home(request):
@@ -7,3 +7,8 @@ def home(request):
 def hello(request,name):
     content=f"<html> <body><h1> Welcome to my app {name}</h1></body></html>"
     return HttpResponse(content)
+
+def form_view(request):
+    form=DemoForm()
+    context={"form":form}
+    return render(request,"home.html",context)
