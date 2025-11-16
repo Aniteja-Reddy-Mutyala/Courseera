@@ -16,3 +16,6 @@ def form_view(request):
         form.save()    
     context={"form":form}
     return render(request,"home.html",context)
+def menu_item(request):
+    menuItem={"mains":[{"name":"Greek salad","price":"15"},{"name":"Falafel","price":"20"},{"name":"gyro","price":"25"}]}
+    return render(request,"menu.html",menuItem)
