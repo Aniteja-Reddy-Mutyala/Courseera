@@ -10,5 +10,9 @@ def hello(request,name):
 
 def form_view(request):
     form=DemoForm()
+    if request.method=='POST':
+        form=DemoForm(request.POST)
+    if form.is_valid():
+        form.save()    
     context={"form":form}
     return render(request,"home.html",context)

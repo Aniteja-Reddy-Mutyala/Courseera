@@ -1,5 +1,7 @@
 from django import forms
-
-class DemoForm(forms.Form):
-    name=forms.CharField(required=False)
+from .models import Menu
+class DemoForm(forms.ModelForm):
+    class Meta:
+        model=Menu
+        fields='__all__'
     
