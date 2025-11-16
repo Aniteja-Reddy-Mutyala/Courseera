@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%csrf_token%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: aqua;">
+    {% for items in menu %}
+    <h1 style="text-decoration: solid;">{{items.name}}</h1>
+    <p style="color: bisque;">{{items.price}}</p>
+    {% endfor %}
+    </div>
+</body>
+</html>

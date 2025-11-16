@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class Menu(models.Model):
     name=models.CharField(max_length=100)
-    cuisine=models.CharField(max_length=100)
+    #cuisine=models.CharField(max_length=100)
     price=models.IntegerField()
     #category_id=models.ForeignKey(Menu,on_delete=models.PROTECT,default=None)
 
     def __str__(self):
-        return self.name +":"+self.cuisine
+        return self.name 
