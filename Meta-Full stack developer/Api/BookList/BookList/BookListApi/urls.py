@@ -1,7 +1,10 @@
 from django.urls import path
 from . import views
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('books', views.BookView.as_view()),
     path('books/<int:pk>', views.SingleBookView.as_view()),
+    path('secret/',views.secret),
+    path('api-token-auth/',obtain_auth_token),
 ]
