@@ -11,6 +11,7 @@ from rest_framework.response import Response
 from rest_framework.throttling import AnonRateThrottle
 
 class BookView(generics.ListCreateAPIView):
+    throttle_classes=[AnonRateThrottle]
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
