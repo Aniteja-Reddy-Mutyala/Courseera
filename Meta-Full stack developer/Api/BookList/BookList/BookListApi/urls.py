@@ -7,4 +7,5 @@ urlpatterns = [
     path('books/<int:pk>', views.SingleBookView.as_view()),
     path('secret/',views.secret),
     path('api-token-auth/',obtain_auth_token),
+    path('throttle-check/',views.throttle_check,name="throttle")
 ]
