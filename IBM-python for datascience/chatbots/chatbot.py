@@ -26,7 +26,7 @@ while True:
         history_string, 
         input_text, 
         return_tensors="pt"  
-    
+    )
     # Generate response
     outputs = model.generate(**inputs, max_length=100)
     
