@@ -1,0 +1,50 @@
+   0.006220250s  INFO prepare_target{force=false package_id=ownership v0.1.0 (/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership) target="ownership"}: cargo::core::compiler::fingerprint: fingerprint error for ownership v0.1.0 (/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership)/Check { test: false }/TargetInner { name: "ownership", doc: true, ..: with_path("/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership/src/main.rs", Edition2024) }
+   0.006242583s  INFO prepare_target{force=false package_id=ownership v0.1.0 (/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership) target="ownership"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership/target/debug/.fingerprint/ownership-ced8914e0c5b693d/bin-ownership`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.048886583s  INFO prepare_target{force=false package_id=ownership v0.1.0 (/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership) target="ownership"}: cargo::core::compiler::fingerprint: fingerprint error for ownership v0.1.0 (/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership)/Check { test: true }/TargetInner { name: "ownership", doc: true, ..: with_path("/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership/src/main.rs", Edition2024) }
+   0.048906583s  INFO prepare_target{force=false package_id=ownership v0.1.0 (/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership) target="ownership"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership/target/debug/.fingerprint/ownership-69572aae7b33c55e/test-bin-ownership`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking ownership v0.1.0 (/Users/anirudh/Desktop/Courseera/Packt-Learn to code with Rust/Memory Safety and Structuring Programs/ownership)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.35s

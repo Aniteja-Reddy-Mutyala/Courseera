@@ -1,0 +1,1 @@
+/Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Rust\ Basics\ and\ Core\ Concepts/functions/target/debug/functions: /Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Rust\ Basics\ and\ Core\ Concepts/functions/src/main.rs

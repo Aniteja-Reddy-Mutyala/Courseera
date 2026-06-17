@@ -1,0 +1,1 @@
+/Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Rust\ Basics\ and\ Core\ Concepts/data_types/target/debug/data_types: /Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Rust\ Basics\ and\ Core\ Concepts/data_types/src/main.rs

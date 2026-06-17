@@ -1,0 +1,1 @@
+/Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Memory\ Safety\ and\ Structuring\ Programs/ownership/target/debug/ownership: /Users/anirudh/Desktop/Courseera/Packt-Learn\ to\ code\ with\ Rust/Memory\ Safety\ and\ Structuring\ Programs/ownership/src/main.rs
